@@ -61,7 +61,7 @@ function truncate (str) {
     let newStr = "";
     let ellipsis = "...";
 
-    for(let i = 0; i <= 15; i++){
+    for(let i = 0; i <= 14; i++){
         const currentChar = str[i];
         newStr += currentChar;
     }
@@ -105,10 +105,11 @@ console.log(reverse("mesuara"));
 console.log("/////////////////////////////////////");
 console.log("▶︎onlyVowels◀︎ \n");
 
-function onlyVowels (str1) {
+function onlyVowels (str1) {  
+    let str = str1.toLowerCase();
     let result = "";
-    for(let i = 0; i < str1.length; i++){
-        let currentLetter = str1[i];
+    for(let i = 0; i < str.length; i++){
+        let currentLetter = str[i];
 
         if(currentLetter === 'a' || currentLetter === 'e' || currentLetter === 'i' || currentLetter === 'o' || currentLetter === 'u'){
             result += currentLetter
@@ -120,7 +121,7 @@ console.log(onlyVowels("Colin Jaffe"));
 console.log(onlyVowels("quickly"));
 console.log(onlyVowels("Anthony DeRosa"));
 
-console.log("/////////////////////////////////////");
+console.log("/////////////////Extra Stretch Goals////////////////////");
 console.log("▶︎crazyCase◀︎ \n");
 
 function crazyCase (str1) {
