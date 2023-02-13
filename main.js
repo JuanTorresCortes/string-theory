@@ -142,13 +142,27 @@ console.log("/////////////////////////////////////");
 console.log("▶︎titleCase◀︎ \n");
 
 function titleCase (str1) {
-    let str = str1.toLowerCase();
-    let newStr = "";
+ let newString = [];
+ let result = newString.join(" ")
+ const str = str1.toLowerCase().split(' ')
+ 
 
-    for(let i = 0; i < str.length; i++){
-        newStr += "x";
+ for(let i = 0; i < str.length; i++){
+    const currentWord = str[i];
+    //console.log(currentWord)
+    for(let j = 0; j < currentWord.length; j++){
+        const currentLetter = currentWord[j];
+        //console.log(currentLetter);
+        //console.log(j);
+        if(j === 0){
+            let toUpper = currentLetter.toUpperCase();
+            //console.log(toUpper);
+            newString.push(toUpper)
+         }else{newString.push(currentLetter)}
     }
-    return newStr;
+    
+ }
+ return newString;
 }
 console.log(titleCase("return of the king"));
 console.log(titleCase("cOde iMMerSives"));
